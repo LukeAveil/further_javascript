@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
 var expect = require('chai').expect;
 
-var ToDo = require('../src/toDo');
+var ToDo = require('../src/toDo').ToDo;
 
 
 describe('ToDo', function() {

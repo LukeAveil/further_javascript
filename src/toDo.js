@@ -1,3 +1,5 @@
+(function(exports) {
+
 var ToDo = function(task) {
   this.task = task;
   this.isComplete = false;
@@ -8,6 +10,5 @@ ToDo.prototype = {
     this.isComplete = true;
   },
 };
-
-
-module.exports = ToDo;
+exports.ToDo = ToDo;
+})(this);

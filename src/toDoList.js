@@ -1,13 +1,12 @@
-var ToDo = require('../src/toDo');
-var Mustache = require("mustache");
-
-var ToDoList = function() {
+(function(exports){
+var ToDoList = function(ToDo) {
+  this.ToDo = ToDo;
   this.tasks = [];
 };
 
 ToDoList.prototype = {
-	addToDo: function(task) {
-    var toDo = new ToDo(task);
+	addToDo: function(task, ToDo) {
+    var toDo = new this.ToDo(task);
     this.tasks.push(toDo);
 	},
 
@@ -28,4 +27,5 @@ ToDoList.prototype = {
 
 };
 
-module.exports = ToDoList;
+exports.ToDoList = ToDoList;
+})(this);
