@@ -25,3 +25,16 @@ ToDoList.prototype = {
 };
 
 module.exports = ToDoList;
+
+
+var HTML = function() {
+
+}
+
+HTML.prototype = {
+  listTask: function(task) {
+    foreach Do
+    return "<ul><li><div>"+this.tasks.task+"</ul></li></div>"
+    end
+  },
+}
