@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "mocha test",
-    "build": "mustache dataView.json myTemplate.mustache > public/output.html"
+    "build": "mustache dataView.json myTemplate.mustache > public/output.html",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC"

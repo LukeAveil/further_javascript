@@ -1,7 +1,7 @@
 var assert = require('chai').assert;
 var expect = require('chai').expect;
 
-var ToDo = require('../src/toDo')
+var ToDo = require('../src/toDo');
 
 
 describe('ToDo', function() {
@@ -10,6 +10,7 @@ describe('ToDo', function() {
 
 	beforeEach(function() {
 		toDo = new ToDo('Eat breakfast');
+    toDoTwo = new ToDo('Eat lunch');
 	});
 
 
@@ -33,5 +34,7 @@ describe('ToDo', function() {
     toDo.finished();
     assert.equal(toDo.isComplete, true);
   });
+
+
 
 });

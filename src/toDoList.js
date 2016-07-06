@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 var ToDo = require('../src/toDo');
+var Mustache = require("mustache");
 
 var ToDoList = function() {
   this.tasks = [];
@@ -9,32 +9,23 @@ ToDoList.prototype = {
 	addToDo: function(task) {
     var toDo = new ToDo(task);
     this.tasks.push(toDo);
-=======
-// require ToDo
+	},
 
-var ToDoList = function(ToDo) {
-  this.ToDo = ToDo();
-};
->>>>>>> 8c6a374e5b52a843abd968c167ddaa139f38834f
-
-ToDoList.prototype = {
-	addToDo: function(task) {
-    var todo = new this.ToDo(task);
-	}
+  showNames: function(){
+    var list = this.tasks.map(function(task){
+      return task.task;
+    });
+    return list;
+  },
+  render: function(){
+    var view = {
+      tasks: this.showNames()
+    };
+    var template = '<ul>{{#tasks}}<li>{{.}}</li>{{/tasks}}</ul>';
+    var html = Mustache.to_html(template, view);
+    return html;
+  }
 
 };
 
 module.exports = ToDoList;
-
-
-var HTML = function() {
-
-}
-
-HTML.prototype = {
-  listTask: function(task) {
-    foreach Do
-    return "<ul><li><div>"+this.tasks.task+"</ul></li></div>"
-    end
-  },
-}
