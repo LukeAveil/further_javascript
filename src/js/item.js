@@ -2,9 +2,9 @@
 
   var idCounter = 0;
 
-	var Item = function(item)  {
+	var Item = function(item, completed)  {
 	  this._item = item;
-	  this._complete = false;
+	  this._complete = typeof completed === "undefined" ? false : completed;
     this.id = idCounter++;
 	};
 

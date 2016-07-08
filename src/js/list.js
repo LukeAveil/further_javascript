@@ -5,8 +5,8 @@
 	};
 
   	List.prototype = {
-      addItem: function(item, itemConstructor){
-  	  this.list.push(createItem(item, itemConstructor));
+      addItem: function(item, completed, itemConstructor){
+  	  this.list.push(createItem(item, completed, itemConstructor));
   	  return this.list;
   	},
       getItemById: function(itemId) {
@@ -21,8 +21,8 @@
 
 	// Helpers //
 
-	function createItem(item, itemConstructor) {
-	  return new itemConstructor(item);
+	function createItem(item, completed, itemConstructor) {
+	  return new itemConstructor(item, completed);
 	}
 
 	exports.List = List;
