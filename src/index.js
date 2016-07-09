@@ -18,4 +18,7 @@ function changeStatus(itemId){
   item.changeStatus();
   updateList();
 }
+
+
+
 window.onload = updateList;
